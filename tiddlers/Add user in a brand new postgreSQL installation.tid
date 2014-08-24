@@ -1,0 +1,43 @@
+created: 20140824184508589
+modified: 20140824192604058
+tags: PostgreSQL [[add user]] configuration
+title: Add user in a brand new postgreSQL installation
+type: text/vnd.tiddlywiki
+
+When trying to do stuff like 'createdb book', the first time this error popped-up :
+ "createdb: could not connect to database postgres: FATAL: password authentication failed for user"
+
+PostgreSQL by default try to identify as the current linux user, but at first no user is defined.
+To add new user the SQL command is CREATE ROLE, which is also wrapped as a shell command createuser;
+which is cute and all but since cannot be used since no user is defined (remember ?)
+
+The solution that worked for me (on Ubuntu) was following the 'Manur' comment here : http://stackoverflow.com/questions/1471571/how-to-configure-postgresql-for-the-first-time, namely :
+
+* Connect to the default database with user postgres :
+	`sudo -u postgres psql template1`
+
+* Set the password for user postgres, then exit psql (Ctrl-D) :
+	`ALTER USER postgres with encrypted password 'xxxxxxx';`
+
+* Edit the pg_hba.conf file :
+	`sudo vim /etc/postgresql/9.1/main/pg_hba.conf`
+	and change "peer" to "md5" on the line concerning postgres :
+	`local      all     postgres     peer md5`
+
+* Restart the database :
+	`sudo /etc/init.d/postgresql restart`
+	(Here you can check it worked with `psql -U postgres`.)
+
+* Create a user having the same name as you (to find it, you can type `whoami`) :
+	`createuser -U postgres -d -e -E -l -P -r -s <my_name>`
+  The options tell postgresql to create a user that can login, create databases, create new roles, is a superuser, and will have an encrypted 	password. The really important ones are -P -E, so that you're asked to type the password that will be encrypted, and -d so that you can do a 	createdb.
+  Beware of passwords : it will first ask you twice the new password (for the new user), repeated, and then once the postgres password (the 	one specified on step 2).
+
+* Edit the pg_hba.conf file (see step 3 above), and change "peer" to "md5" on the line concerning "all" other users :
+	`local      all     all     peer md5`
+
+* Restart (like in step 4), and check that you can login without -U postgres :
+	`psql template1`
+	Note that if you do a mere psql, it will fail since it will try to connect you to a default database having the same name as you (ie. 		whoami). template1 is the admin database that is here from the start.
+
+Now `createdb <dbname>` should work.
