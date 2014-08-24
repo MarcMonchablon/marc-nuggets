@@ -1,9 +1,8 @@
 created: 20140824012632485
-modified: 20140824185022044
-tags: BDD PostgreSQL SQL
+modified: 20140824200108781
+tags: BDD PostgreSQL SQL [[Seven Databases in Seven Weeks]]
 title: PostgreSQL
 type: text/vnd.tiddlywiki
 
-To add a new user, see : http://stackoverflow.com/questions/1471571/how-to-configure-postgresql-for-the-first-time
-
-- To add a new user for the first time : [[Add user in a brand new postgreSQL installation]]
+* [[Add user in a brand new postgreSQL installation]]
+* [[Add modules in PostgreSQL]]

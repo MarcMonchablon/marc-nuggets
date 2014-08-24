@@ -1,0 +1,7 @@
+created: 20140824200148365
+modified: 20140824200618821
+tags: PostgreSQL [[Seven Databases in Seven Weeks]]
+title: Add modules in PostgreSQL
+type: text/vnd.tiddlywiki
+
+In order to install modules (like `cube`), the syntax is `CREATE EXTENSION cube`. Don't found the module ? Well, maybe you should `apt-get install postgresql-contrib` you big duffus !
