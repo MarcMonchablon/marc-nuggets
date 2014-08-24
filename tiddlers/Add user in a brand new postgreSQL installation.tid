@@ -1,5 +1,5 @@
 created: 20140824184508589
-modified: 20140824200633982
+modified: 20140824212914226
 tags: PostgreSQL [[add user]] configuration [[Seven Databases in Seven Weeks]]
 title: Add user in a brand new postgreSQL installation
 type: text/vnd.tiddlywiki
@@ -9,7 +9,7 @@ When trying to do stuff like 'createdb book', the first time this error popped-u
 
 PostgreSQL by default try to identify as the current linux user, but at first no user is defined.
 To add new user the SQL command is CREATE ROLE, which is also wrapped as a shell command createuser;
-which is cute and all but since cannot be used since no user is defined (remember ?)
+which is cute and all but cannot be used since no user is defined (remember ?).
 
 The solution that worked for me (on Ubuntu) was following the 'Manur' comment here : http://stackoverflow.com/questions/1471571/how-to-configure-postgresql-for-the-first-time, namely :
 
