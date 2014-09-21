@@ -1,0 +1,35 @@
+created: 20140921213008417
+modified: 20140921221031343
+tags: Lisp Refresher
+title: Lisp Refresher
+type: text/vnd.tiddlywiki
+
+! keyword 
+
+; defparameter
+: Define a ''global'' variable
+: `(defparameter *var* 5)`
+
+; defvar
+: Define a global variable. Contrary to ''defparameter'' don't overwrite previous value of variable
+
+; defun
+: Define a function
+: `(defun square (n) (* n n))`
+
+; let
+: Define a ''local'' variable
+: `(let ((a 5) (b 6)) (+ a b))`
+
+; flet
+: Define a ''local'' function
+: `(flet (
+    (function_name (arguments) function_body)) 
+    scope)`
+
+; labels
+: Almost the same as ''flet'', structurally identical, but allow things like
+: `(labels (
+     (mul (x y) (* x y))
+     (square (n) (mul n n)))
+    (square 3))`

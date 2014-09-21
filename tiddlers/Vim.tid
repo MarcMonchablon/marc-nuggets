@@ -1,0 +1,93 @@
+created: 20140913220634883
+modified: 20140913221359137
+title: Vim
+type: text/vnd.tiddlywiki
+
+x	delete the caracter at the cursor type
+i	insert before the cursor
+A	append at the end of the line
+dw	make the word disappear (cursor at the beggining)
+d$	delete to the end of the line
+dd	delete the whole line
+u	undo the last command
+U	fix the whole line
+C^R	redo the command
+p	put previously deleted text after the cursor
+	 - if a whole line was deleted, paste this line on the line below cursor's
+rx	replace character at the cursor with x
+ce	delete the word and place you in insert mode
+c$	delete the rest of the line and place you in insert mode
+C^g	show location and file status
+n G	move to line n (with n a number)
+G	move to the end of the file
+gg	move to the start of the file
+/	search (forward)
+	 type the phrase, then enter to place cursor on next iteration of the word
+	 n to search for the same phrase again
+	 N to search again (backward)
+	 C^o to go back to where you came
+	 C^i goes forward
+	 /text\c ignore case for this search
+?	same as /, but in the backward direction
+%	find matching ),],}
+v	start visual selection
+	 :w name  save the selection in file 'name'
+o	open a line below the cursor and place you in insert mode
+O	open a line above the cursor and place you in insert mode
+e	place you at the end (INCLUDING LAST CHARACTER) of next word
+a	insert text AFTER the cursor
+R	replace multiple character (behave like 'insert' keyboard key)
+y	yank selection
+yw	yank one word
+j$	move to the end of next line
+
+
+:! [command]		execute external (shell) command
+:w name			same current file as 'name'
+:r name			insert content of file 'name' below cursor
+:r !command		insert output of the command below cursor
+
+:s/old/new/		change first occurence of 'old' to 'new'
+:s/old/new/g		change all occurences in line
+:#,#s/old/new/g		substitutes in the range of line defined by #,#
+:%s/old/new/g		change every occurence in the whole file
+:%s/old/new/gc		same, but ask every time
+
+
+
+motion caracters :
+d	delete
+c	change
+y	yank
+
+list of motion :
+w	until the start of next word, EXCLUDING its first character
+e	to the end of the current word, INCLUDING the last character
+$	to the end of the line, INCLUDING the last character
+
+options :
+  - prepend (no( to switch an option off
+
+ic/ignorecase		ignore upper/lower case when searching
+is/incsearch		show partial matches for a search phrase
+hls/hlsearch		highlight all matching phrases
+
+help :
+:help / <F1> / <HELP>	display help (duh !)
+C^w C^w			jump from one windows to another
+:q			close the help window
+:help [command]		find help on command 
+:help vimrc-intro	help on vimrc
+:help user-manual	help on vim
+
+
+
+Misc :
+
+ - Typing a number before a motion repeats it that many times
+ - Type 0 to move to the start of the line
+ - :set XXX is how you set options
+	ic / noic  ignore/count case
+	hlsearch/nohlsearch	highlight search result
+ - C^d while writing a command show all available matches
+ - <TAB> autocomplete (duh !)
