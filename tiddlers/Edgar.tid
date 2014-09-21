@@ -1,6 +1,6 @@
 created: 20140824013717729
 creator: pup
-modified: 20140824211759968
+modified: 20140921232914195
 modifier: pup
 tags: Main Poe [[Point of Entry]]
 title: Edgar
@@ -12,5 +12,12 @@ Hello ! I'm Edgar, as in Edgar Allan Poe, as in the Point Of Entry of this ~Tidd
 yeah. Sorry.
 'nuf said ! Here's the index :
 
+ * Language
+ ** [[Lisp Refresher]]
+ *** [[Defining stuff in Lisp]]
+ * Tool
+ ** [[Vim]]
  * BDD
  ** [[PostgreSQL]]
+ *** [[Add user in a brand new postgreSQL installation]]
+ *** [[Add modules in PostgreSQL]]
