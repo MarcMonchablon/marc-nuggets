@@ -1,0 +1,12 @@
+created: 20140922231432798
+modified: 20140922233427112
+tags: Lisp
+title: Control Flow
+type: text/vnd.tiddlywiki
+
+; if
+: >``(if (= (+ 1 2) 3) `yup `nope)
+YUP``
+: // Note : ''if'' isn't just a function, it's a ''special form'' ! It mean that only one branch will be evaluated.//
+: //Thus stuff like// ``(if (oddp 5) `odd-number (/ 1 0))``
+: //won't return error.//
