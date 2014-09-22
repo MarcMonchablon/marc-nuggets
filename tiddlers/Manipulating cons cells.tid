@@ -1,0 +1,10 @@
+created: 20140921234828688
+modified: 20140922000610698
+tags: Lisp
+title: Manipulating cons cells
+type: text/vnd.tiddlywiki
+
+; cons function
+: Change symbol in Cons Cells
+: >``(cons `chicken ̀ cat)
+(CHICKEN . CAT)``

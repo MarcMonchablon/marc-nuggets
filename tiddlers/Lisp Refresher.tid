@@ -1,7 +1,16 @@
 created: 20140921213008417
-modified: 20140921232511328
+modified: 20140921234751789
 tags: Lisp Refresher
 title: Lisp Refresher
 type: text/vnd.tiddlywiki
 
 * [[Defining stuff in Lisp]]
+* [[Manipulating cons cells]]
+
+!! Misc
+
+; printc
+: Print string
+
+; ash  (ash a b)
+: Bitwise shift variable a by b bits
