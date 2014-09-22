@@ -1,5 +1,5 @@
 created: 20140921234828688
-modified: 20140922000610698
+modified: 20140922213602867
 tags: Lisp
 title: Manipulating cons cells
 type: text/vnd.tiddlywiki
@@ -8,3 +8,37 @@ type: text/vnd.tiddlywiki
 : Change symbol in Cons Cells
 : >``(cons `chicken ̀ cat)
 (CHICKEN . CAT)``
+
+; nil
+: Special symbol used to terminate a list
+: >``(cons `chicken ̀ nil)
+(CHICKEN)``
+: Also equivalent to ''()''
+: >``(cons `chicken ())
+(CHICKEN)``
+
+; car
+: Get the thing out of the ''first'' slot of a cell
+: >``(car `(pork beef chicken))
+PORK``
+
+; crd
+: Grab the value out of the ''remainder'' of a list
+: >``(cdr `(pork beef chicken))
+(BEEF CHICKEN)``
+
+; cadr
+: Same as using ''car'' and ''cdr'' together
+: (returns the second item of a list)
+: exist also in ''cdar'' and ''cadadr'' flavor
+
+; list
+: Create all the cons cell all at once
+: >``(list `pork `beef `chicken)``
+: >``(cons `pork (cons `beef (cons `chicken ())))``
+: >`` `(pork beef chicken)``
+: all three give
+: ``(PORK BEEF CHICKEN)`` 
+
+; Gnip
+: gnip
