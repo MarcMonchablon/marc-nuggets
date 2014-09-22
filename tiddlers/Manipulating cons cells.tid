@@ -1,5 +1,5 @@
 created: 20140921234828688
-modified: 20140922213602867
+modified: 20140922220627490
 tags: Lisp
 title: Manipulating cons cells
 type: text/vnd.tiddlywiki
@@ -30,7 +30,7 @@ PORK``
 ; cadr
 : Same as using ''car'' and ''cdr'' together
 : (returns the second item of a list)
-: exist also in ''cdar'' and ''cadadr'' flavor
+: exist also in ''cdar'', ''cddr'' and ''cadadr'' flavor
 
 ; list
 : Create all the cons cell all at once
@@ -39,6 +39,3 @@ PORK``
 : >`` `(pork beef chicken)``
 : all three give
 : ``(PORK BEEF CHICKEN)`` 
-
-; Gnip
-: gnip
