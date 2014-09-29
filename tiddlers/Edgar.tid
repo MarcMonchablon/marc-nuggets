@@ -1,6 +1,6 @@
 created: 20140824013717729
 creator: pup
-modified: 20140922233640517
+modified: 20140929215542889
 modifier: pup
 tags: Main Poe [[Point of Entry]]
 title: Edgar
@@ -19,6 +19,7 @@ yeah. Sorry.
  *** [[Control Flow in Lisp]]
  * Tool
  ** [[Vim]]
+ ** [[Emacs]]
  * BDD
  ** [[PostgreSQL]]
  *** [[Add user in a brand new postgreSQL installation]]

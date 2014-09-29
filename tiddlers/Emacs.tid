@@ -1,0 +1,7 @@
+created: 20140929215550938
+modified: 20140929215636798
+title: Emacs
+type: text/vnd.tiddlywiki
+
+* To customize thingz
+ `M-x customize`
