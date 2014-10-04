@@ -1,6 +1,6 @@
 created: 20140824013717729
 creator: pup
-modified: 20141004151457427
+modified: 20141004212633160
 modifier: pup
 tags: Main Poe [[Point of Entry]]
 title: Edgar
@@ -22,6 +22,7 @@ yeah. Sorry.
  * Tool
  ** [[Vim]]
  ** [[Emacs]]
+ *** [[Reading pdf in Emacs]]
  * BDD
  ** [[PostgreSQL]]
  *** [[Add user in a brand new postgreSQL installation]]

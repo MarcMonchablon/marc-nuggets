@@ -1,0 +1,50 @@
+created: 20141004204958362
+modified: 20141004212441093
+tags: Emacs
+title: Reading pdf in Emacs
+type: text/vnd.tiddlywiki
+
+Emacs can (of course) read //.pdf// files.
+And whatsmore, the built-in pdf reader is REALLY handy, especially the ability to slice part of the page to display.
+
+!! Opening a .pdf
+Emacs doesn't read the .pdf directly, instead it is converted to ghostscript. The image cache used by emacs is specified in `doc-view-cache-directory`. This cache can be cleared with `M-x doc-view-clear-cache`.
+
+If anything go bad with the document conversion, it is possible to use `K (doc-view-kill-proc)` or even `k (doc-view-kill-proc-and-buffer)`.
+
+!! Adjusting the display of the document
+
+; `P`
+: Fit the image to the window
+
+; `H`
+: Fit the document height to the window height
+
+; `W`
+: Fit the document width to the window width
+
+; `+` and `-`
+: Enlarge your page ! (or shrink it)
+
+; `s m (doc-view-set-slice-using-mouse)`
+: Allow the slicing of the display region.
+: With the mouse (the mouse ! :O) select the upper-left corner to display and drag to the lower-right corner. All the other pages will be sliced in this way.
+: //(Super handy function to get rid of those pesky margin)//
+
+; `s r (doc-view-reset-slice)`
+: Reset the selected slice
+
+!! Navigating in ~DocView
+
+; `n` and `p`
+: Go to the next / previous page.
+
+; `space` and `del`
+: Go to next / previous page.
+
+; `C-n` and `C-p`
+: Scroll forward / backward in the current page.
+: If you change `doc-view-continuous` to a non-nil value, it also continue to the next/previous page.
+
+; `M-g M-g` or `M-g g`
+: Jump to a page by its number

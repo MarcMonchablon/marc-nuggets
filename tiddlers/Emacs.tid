@@ -1,7 +1,13 @@
 created: 20140929215550938
-modified: 20141004163255456
+modified: 20141004212532919
+tags: Emacs
 title: Emacs
 type: text/vnd.tiddlywiki
+
+[[Reading pdf in Emacs]]
+
+; The most important command evar
+: `M-x discover-my-major`
 
 ; Run Common Lisp in Emacs
 : `M-x inferior-lisp`

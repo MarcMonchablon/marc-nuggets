@@ -1,5 +1,5 @@
 created: 20141004105407574
-modified: 20141004110625137
+modified: 20141004193836845
 tags: Lisp
 title: Cool tricks with conditions
 type: text/vnd.tiddlywiki
@@ -21,7 +21,7 @@ can be changed to :
 ```
 (and *file-modified (ask-user-about-saving) (save-file)))
 ```
-Which can be seen as more elegant (symmetry !), but since (save-file) do something else than returning a boolean, we also can write :
+Which can be seen as more elegant (symmetry !), but since (save-file) do something else than returning a boolean, it can be seen as confusing. So we also can write :
 
 ```
 (if (and *file-modified* (ask-user-about-saving))
