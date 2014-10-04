@@ -1,10 +1,10 @@
 created: 20140921213008417
-modified: 20141004114149867
+modified: 20141004115738284
 tags: Lisp Refresher
 title: Lisp Refresher
 type: text/vnd.tiddlywiki
 
-To run Common Lisp in Emacs, run `M-x inferior-lisp`
+//Disclaimer//: Most (if not all) of the things written in this section is taken (sometime verbatim) from the excellent book 'Land of Lisp' by Conrad Barski.
 
 * [[Defining stuff in Lisp]]
 * [[Manipulating cons cells]]
@@ -12,6 +12,7 @@ To run Common Lisp in Emacs, run `M-x inferior-lisp`
 ** [[Cool tricks with conditions]]
 * [[Comparing stuff in Lisp]]
 * [[Lisp data structures]]
+* [[Lisp quasiquoting]]
 
 !! Misc
 

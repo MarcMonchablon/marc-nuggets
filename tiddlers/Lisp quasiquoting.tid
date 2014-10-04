@@ -1,0 +1,32 @@
+created: 20141004114905913
+modified: 20141004121746179
+tags: Lisp
+title: Lisp quasiquoting
+type: text/vnd.tiddlywiki
+
+''Quasiquoting'' make easier the embedding of chunks of codes in data. It allow in //data mode// to briefly go back in //code mode//.
+
+To enable quasiquoting, It is necessary to use the ''backquote'' (also called ''backtick'', also called //fucking-character-from-hell// by anyone with french keyboard layout) and not the single quote (use ``[`]`` and not `[']`).
+
+Both the single quote and the backquote in Lisp flip a piece of code into data mode, but only a backquote can be //unquoted// using the comma (`[,]`).
+
+Example :
+
+>`(defparameter *value* 5)`
+`*VALUE*`
+
+>`(defun square (n)
+   (* n n))`
+`SQUARE`
+
+>`` `(My super value *value* through my extra-cool function square give me (square *value*) !)``
+
+`(MY SUPER VALUE *VALUE* THROUGH MY EXTRA-COOL FUNCTION SQUARE GIVE ME (SQUARE *VALUE*) !)`
+
+(without quasiquoting, everything stay in //data mode//)
+
+>```(My super value ,*value* through my extra-cool function square give me ,(square *value*) !)``
+
+`(MY SUPER VALUE 5 THROUGH MY EXTRA-COOL FUNCTION SQUARE GIVE ME 25 !)`
+
+(here the comma signal Lisp to switch briefly to //code mode// which is then evaluated)

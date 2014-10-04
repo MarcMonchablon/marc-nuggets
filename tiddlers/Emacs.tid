@@ -1,7 +1,10 @@
 created: 20140929215550938
-modified: 20141004104900209
+modified: 20141004115829374
 title: Emacs
 type: text/vnd.tiddlywiki
+
+; run Common Lisp in Emacs
+: `M-x inferior-lisp`
 
 ; To customize thingz
 : `M-x customize`
