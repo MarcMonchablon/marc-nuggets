@@ -1,0 +1,14 @@
+created: 20141004114232744
+modified: 20141004114536047
+tags: Lisp
+title: Lisp data structures
+type: text/vnd.tiddlywiki
+
+''Association list'' (also called ''alist'' for short) :
+
+```
+(defparameter *nodes*
+    `((living-room (you are in the living room. A wizard is snoring loudly on the couch))
+      (garden      (you are in a beautiful garden. There is a well in front of you.))
+      (attic       (you are in the attic. There is a giant welding torch in the corner))))
+```
