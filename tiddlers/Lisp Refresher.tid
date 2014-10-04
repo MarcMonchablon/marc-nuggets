@@ -1,5 +1,5 @@
 created: 20140921213008417
-modified: 20141004115738284
+modified: 20141004124947573
 tags: Lisp Refresher
 title: Lisp Refresher
 type: text/vnd.tiddlywiki
@@ -15,6 +15,25 @@ type: text/vnd.tiddlywiki
 * [[Lisp quasiquoting]]
 
 !! Misc
+
+; mapcar
+: Take a function and a list, and apply this function to all the elements of the list.
+: >`(mapcar #'sqrt '(4 9 25))`
+: `(2.0 3.0 5.0)`
+: // __Note__: The #' symbol is a shorthand for the function operator, used by lisp interpreted to disambiguate between parameter name and function name.//
+
+; apply
+: Pass it a function and a list of objects, and it pretend that the items in the list are separate objects and pass them to the given function as such.
+: >``(append `((mary had) (a) (little lamb))``
+: `((MARY HAD) (A) (LITTLE LAMB))`
+: >``(apply #'append `((mary had) (a) (little lamb))``
+: `(MARY HAD A LITTLE LAMB)`
+: // __Note__: You can run into problems when using apply to a very large list (it use target which have a limited number of allowed argument. This value can be checked with ''call-argument-limit'')//.
+
+; append
+: Well, append things. Duh !
+: >`(append '(mary had) '(a) '(little lamb))`
+: `MARY HAD A LITTLE LAMB`
 
 ; printc
 : Print string

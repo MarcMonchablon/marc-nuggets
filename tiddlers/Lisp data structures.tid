@@ -1,5 +1,5 @@
 created: 20141004114232744
-modified: 20141004114536047
+modified: 20141004125417607
 tags: Lisp
 title: Lisp data structures
 type: text/vnd.tiddlywiki
@@ -12,3 +12,9 @@ type: text/vnd.tiddlywiki
       (garden      (you are in a beautiful garden. There is a well in front of you.))
       (attic       (you are in the attic. There is a giant welding torch in the corner))))
 ```
+
+When can search for an item using a key with ''assoc''.
+
+> ``(assoc `garden *nodes*)``
+`(GARDEN (YOU ARE IN` [...]`)`
+
