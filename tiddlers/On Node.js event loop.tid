@@ -1,10 +1,9 @@
-created: 20141004145248346
-modified: 20141004150316194
-tags: Node Javascript
-title: NodeJS
+created: 20141004151923733
+modified: 20141004153409995
+tags: Node.js
+title: On Node.js event loop
 type: text/vnd.tiddlywiki
 
-!! About Node asynchronous event loop :
 Node asynchronous event loop is an implementation of the //Reactor Pattern//.
 
 There are two things that can block the event loop :
@@ -22,3 +21,21 @@ One function that is synchronous yet doesn't end with 'Sync' is the ''require'' 
 @@color:red;
 //__Raptor pro-tip__: Don't put a ''require'' in a callback !//
 @@
+
+---
+!! Example of code that block the event loop :
+
+```
+var open = false;
+
+setTimeout(function() {
+	open = true;
+}, 1000);
+
+while(!open) {
+	// wait
+}
+
+console.log('opened !'); // Actually never called
+```
+What happend ? //open// is in fact never set to //true// : Node will never execute the timeout callback because the event loop is stuck in the //while// loop !

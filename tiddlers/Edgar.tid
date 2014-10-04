@@ -1,6 +1,6 @@
 created: 20140824013717729
 creator: pup
-modified: 20141004145223677
+modified: 20141004151457427
 modifier: pup
 tags: Main Poe [[Point of Entry]]
 title: Edgar
@@ -17,6 +17,8 @@ yeah. Sorry.
  *** [[Defining stuff in Lisp]]
  *** [[Manipulating cons cells]]
  *** [[Control Flow in Lisp]]
+  * Server
+ ** [[Node.js Refresher]]
  * Tool
  ** [[Vim]]
  ** [[Emacs]]
@@ -24,5 +26,3 @@ yeah. Sorry.
  ** [[PostgreSQL]]
  *** [[Add user in a brand new postgreSQL installation]]
  *** [[Add modules in PostgreSQL]]
- * Server
- ** [[NodeJS]]

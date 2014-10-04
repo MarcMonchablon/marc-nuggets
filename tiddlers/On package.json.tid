@@ -1,0 +1,12 @@
+created: 20141004152458905
+modified: 20141004153326155
+tags: Node.js
+title: On package.json
+type: text/vnd.tiddlywiki
+
+When installing a module in a application, doing
+`npm install --save XXX` also write the module in the //package.json// manifest.
+
+We can define the explicit version of a package or we can be a bit more loose by writing the version like this `version: 1.2.x`
+
+//__Raptor pro-tip__ :  A common practice is to depend on a specific major and minor version, and not specify the patch version, since patch should theorically only solve issues.//
