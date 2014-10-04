@@ -1,10 +1,13 @@
 created: 20140929215550938
-modified: 20141004115829374
+modified: 20141004163255456
 title: Emacs
 type: text/vnd.tiddlywiki
 
-; run Common Lisp in Emacs
+; Run Common Lisp in Emacs
 : `M-x inferior-lisp`
+
+; Run Javascript (Node.js) in Emacs
+: `M-x run-js`
 
 ; To customize thingz
 : `M-x customize`
