@@ -1,0 +1,46 @@
+created: 20141004110823271
+modified: 20141004113703200
+tags: Lisp
+title: Comparing stuff in Lisp
+type: text/vnd.tiddlywiki
+
+Looooooooots of way to compare stuffs in Lisp, but :
+
+<<<
+* use ''eq'' to compare symbols
+* use ''equal'' for everything else
+<<< Conrad's Rule of thumb for comparing stuff
+(Conrad being of course the writer of 'Land of Lisp')
+
+; eq
+: Symbols should ''always'' be compared to other symbols with this function. 
+: >``(defparameter *fruit* `apple)``
+: >``(cond ((eq *fruit* `apple) `its-an-apple)
+        (eq *fruit* `orange) `its-an-orange)``
+: // __Notes__ : ''eq'' can also be used to compare cons cells, however it return true only when cons is ''compared directly to himself'', two unrelated-yet-same-looking cons cells will return false.//
+
+; equal
+: Tell you when two things are ''isomorphic''
+: >``(equal `(1 2 3) (cons 1 (cons 2 (cons 3)))``
+: `T`
+
+And the other, lesser way of comparing things (used only by worst of peons) : 
+
+; eql
+: Similar to ''eq'' but also handles comparisons of numbers an characters
+: - Didn't saw the difference when testing personnaly :'( -
+
+; equalp
+: Similar to ''equal'' command, but with more sophistication
+: >`(equal "Bob Smith" "bob smith")`
+: `NIL`
+: >`(equalp "Bob Smith" "bob smith")`
+: `T`
+: >`(equal 3.0 3)`
+: `NIL`
+: >`(equalp 3.0 3)`
+: `T`
+
+; =, string-equals and char-equals
+: Specialization of ''equal'' for specific datatypes
+: (respectively numbers, string and chars)

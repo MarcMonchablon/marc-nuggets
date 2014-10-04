@@ -1,5 +1,5 @@
 created: 20140921213008417
-modified: 20141004103407651
+modified: 20141004110659273
 tags: Lisp Refresher
 title: Lisp Refresher
 type: text/vnd.tiddlywiki
@@ -9,6 +9,7 @@ To run Common Lisp in Emacs, run `M-x inferior-lisp`
 * [[Defining stuff in Lisp]]
 * [[Manipulating cons cells]]
 * [[Control Flow in Lisp]]
+* [[Comparing stuff in Lisp]]
 
 !! Misc
 

@@ -1,8 +1,10 @@
 created: 20140922231432798
-modified: 20141004104350057
+modified: 20141004105333758
 tags: Lisp
 title: Control Flow in Lisp
 type: text/vnd.tiddlywiki
+
+Here for [[Cool tricks with conditions]] !
 
 ; Empty equal false
 : `nil`, `()`, ```nil`` and ```()`` all evaluate to ''false''.

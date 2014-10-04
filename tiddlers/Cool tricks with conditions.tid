@@ -1,0 +1,31 @@
+created: 20141004105407574
+modified: 20141004110625137
+tags: Lisp
+title: Cool tricks with conditions
+type: text/vnd.tiddlywiki
+
+Here are a bunch of 5$ tricks found by a mother for easy lisp flow control - Programmers hates her !
+
+''and'' & ''or'' can be used for conditional behavior trought the power of //shortcut Boolean evaluation// :
+When Lisp determines that an earlier statemment in a list is true (for ''or'', false for ''and''), it doesn't bother evaluating the remaining statements.
+
+Thus the following evaluation :
+
+```
+(if *file-modified*
+	(if (ask-user-about-saving)
+    	(save-file)))
+```
+can be changed to :
+
+```
+(and *file-modified (ask-user-about-saving) (save-file)))
+```
+Which can be seen as more elegant (symmetry !), but since (save-file) do something else than returning a boolean, we also can write :
+
+```
+(if (and *file-modified* (ask-user-about-saving))
+  (save-file))
+```
+
+  
