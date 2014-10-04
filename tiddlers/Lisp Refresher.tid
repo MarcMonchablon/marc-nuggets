@@ -1,5 +1,5 @@
 created: 20140921213008417
-modified: 20140922233654007
+modified: 20141004103407651
 tags: Lisp Refresher
 title: Lisp Refresher
 type: text/vnd.tiddlywiki
@@ -21,5 +21,6 @@ To run Common Lisp in Emacs, run `M-x inferior-lisp`
 ; expt (epxt a b)
 : Return a^b
 
-; Empty Equals False
-: ``(if `() `i-am-true `i-am-false)``
+; progn
+: Wedge an extra command in a simple proposition
+: Only the last evaluation is returned as the value of the full expression.

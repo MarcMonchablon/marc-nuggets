@@ -1,5 +1,5 @@
 created: 20140922231432798
-modified: 20141004102147995
+modified: 20141004104350057
 tags: Lisp
 title: Control Flow in Lisp
 type: text/vnd.tiddlywiki
@@ -21,3 +21,17 @@ YUP``
 : // Note : ''if'' isn't just a function, it's a ''special form'' ! It mean that only one branch will be evaluated.//
 : //Thus stuff like// ``(if (oddp 5) `odd-number (/ 1 0))``
 : //won't return error.//
+
+; case
+: For conditional branching.
+: Example straigth from 'Land of Lisp' :
+```
+(defvar *arch-enemy* nil)
+(defun pudding-eater (person)
+  (case person
+   ((henry) (setf *arch-enemy* `stupid-lisp-alien)
+            `(curse you Lisp Alien - you ate my pudding))
+   ((johnny) (setf *arch-enemy* `useless-old-johnny)
+            `(I hope you choked on my pudding johhny))
+   (otherwise `(why you eat my pudding stranger ?))))
+```

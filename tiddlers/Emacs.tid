@@ -1,13 +1,19 @@
 created: 20140929215550938
-modified: 20141003113805206
+modified: 20141004104900209
 title: Emacs
 type: text/vnd.tiddlywiki
 
-* To customize thingz
- `M-x customize`
- 
+; To customize thingz
+: `M-x customize`
 
-* Emacs and the back-tick hell
-When doing lisp in emacs, the backtick can give trouble
- (like having error saying that parameters are unbound even if they are bounded. Oh God they are bounded. Parameters look straigth from the Folsom fair even).
- Since the backtick in my horrible French keyboard layout is called with Alt Gr + 7 followed by a non-vowel letter, It is better to do the combination twice in a row than doing it once followed by a space. Reason : Emacs's inferior-lisp less grumpy when doing so.
+; Copy/Paste Emacs content to clipboard
+: `M-x clipboard-kill-ring-save` to copy region
+: `M-x clipboard-kill-region` to cut
+: `M-x clipboard-yank` to paste from clipboard
+: Also possible : Put `(setq x-select-enable-cliboard t)` in .emacs
+
+;Emacs and the back-tick hell
+:When doing lisp in emacs, the backtick can give trouble
+: (like having error saying that parameters are unbound even if they are bounded. Oh God they are bounded. Parameters look straigth from the Folsom fair even).
+: Since the backtick in my horrible French keyboard layout is called with Alt Gr + 7 followed by a non-vowel letter, It is better to do the combination twice in a row than doing it once followed by a space.
+: Reason : Emacs's inferior-lisp less grumpy when doing so.
