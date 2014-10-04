@@ -1,5 +1,5 @@
 created: 20141004145248346
-modified: 20141004152158416
+modified: 20141004155456422
 tags: Javascript Refresher Node.js
 title: Node.js Refresher
 type: text/vnd.tiddlywiki
@@ -8,4 +8,25 @@ type: text/vnd.tiddlywiki
 
 * [[On Node.js event loop]]
 * [[On package.json]]
+* [[Using Buffers in Node.js]]
 
+!! Misc
+
+We can use //string interpolation// with //console.log// like this :
+
+> `var a = {1: true, 2: false};`
+> `console.log('This is a number: %d, and this is a string: %s, and this is an object outputted as JSON: %j', 42, 'Hello', a);`
+
+`This is a number: 42, and this is a string: Hello, and this is an object outputted as JSON: {"1": true, "2": false}`
+
+
+; console.warn
+: Write into the stderr
+
+; console.trace()
+: Print the stack trace.
+
+; util.inspect
+: Convenient function for inspecting and printing an object properties like this:
+: >`console.log(util.inspect(a));`
+: We can also specify if we wish to inspect non-enumerable properties, show colors and specify the depth we want to show.

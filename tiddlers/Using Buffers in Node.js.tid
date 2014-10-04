@@ -1,0 +1,35 @@
+created: 20141004155551483
+modified: 20141004161238253
+tags: Node.js
+title: Using Buffers in Node.js
+type: text/vnd.tiddlywiki
+
+; Create a buffer
+: `var buf = new Buffer('Hello World !', 'utf8');`
+: (The //utf8// argument can be removed here since it is the default parameter).
+: Accepted encoding are ''ascii'', ''utf8'' and ''base64''.
+: We can also create an empty buffer of a specified size like this:
+: `var buf = new Buffer(1024);`
+
+; Manipulate a buffer
+: `buf[20] = 56;`
+
+; Slice a buffer
+: >`var buffer = new Buffer('this is the string in my buffer');`
+: >`var slice = buffer.slice(10, 20);`
+: >`slice.toString();`
+: `'e string i'`
+: //__Note__: The slice function use the original buffer, and doesn't create new buffer memory//.
+
+; Copy a buffer
+: `var buffer = new Buffer('this is the string in my buffer');`
+: `var slice = new Buffer(10);`
+: `var targetStart = 0,`
+: `    sourceStart = 10,`
+: `    sourceEnd = 20;`
+: `buffer.copy(slice, targetStart, sourceStart, sourceEnd);`
+
+; Convert a buffer to a string like this
+: `var str = buf.toString();` UTF-8 by default
+: `var str = buf.toString('base64');` (for other encoding)
+

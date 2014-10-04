@@ -1,5 +1,5 @@
 created: 20141004152458905
-modified: 20141004153326155
+modified: 20141004153959033
 tags: Node.js
 title: On package.json
 type: text/vnd.tiddlywiki
@@ -10,3 +10,5 @@ When installing a module in a application, doing
 We can define the explicit version of a package or we can be a bit more loose by writing the version like this `version: 1.2.x`
 
 //__Raptor pro-tip__ :  A common practice is to depend on a specific major and minor version, and not specify the patch version, since patch should theorically only solve issues.//
+
+// __Raptor pro-tip__ : When deploying application on several machines, forget the previous raptor pro-tip and specify the major, minor AND patch version so you'll be sure to run the exact same code everywhere.//
