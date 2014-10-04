@@ -1,0 +1,24 @@
+created: 20141004145248346
+modified: 20141004150316194
+tags: Node Javascript
+title: NodeJS
+type: text/vnd.tiddlywiki
+
+!! About Node asynchronous event loop :
+Node asynchronous event loop is an implementation of the //Reactor Pattern//.
+
+There are two things that can block the event loop :
+
+* Synchronous I/O
+* Big loops
+
+// __Note__: Some function in Node API are synchronous (for instance, file operation). They always terminate in ''Sync'' (eg: fs.readFileSync).
+@@color:red;
+They should be used only when initializing !!
+@@//
+
+One function that is synchronous yet doesn't end with 'Sync' is the ''require'' function.
+
+@@color:red;
+//__Raptor pro-tip__: Don't put a ''require'' in a callback !//
+@@
