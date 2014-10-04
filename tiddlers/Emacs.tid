@@ -1,5 +1,5 @@
 created: 20140929215550938
-modified: 20141004212532919
+modified: 20141004215146209
 tags: Emacs
 title: Emacs
 type: text/vnd.tiddlywiki
@@ -14,6 +14,12 @@ type: text/vnd.tiddlywiki
 
 ; Run Javascript (Node.js) in Emacs
 : `M-x run-js`
+
+; Run Python in Emacs
+: `M-x run-python`
+
+; Run inferior shell in Emacs
+: `M-x shell`
 
 ; To customize thingz
 : `M-x customize`
