@@ -1,5 +1,5 @@
 created: 20140921213008417
-modified: 20141004124947573
+modified: 20141006160151394
 tags: Lisp Refresher
 title: Lisp Refresher
 type: text/vnd.tiddlywiki
@@ -13,6 +13,10 @@ type: text/vnd.tiddlywiki
 * [[Comparing stuff in Lisp]]
 * [[Lisp data structures]]
 * [[Lisp quasiquoting]]
+
+!! Conventions
+
+* When defining a ''predicate'' (a function that return either //nil// or a truth value), it is customary to append the letter ''p'' at the end of his name.
 
 !! Misc
 
@@ -34,6 +38,17 @@ type: text/vnd.tiddlywiki
 : Well, append things. Duh !
 : >`(append '(mary had) '(a) '(little lamb))`
 : `MARY HAD A LITTLE LAMB`
+
+; remove-if-not
+: `(remove-if-not #'predicate myList)`
+: Remove every element of the list which does not satisfy the given predicate.
+
+; find
+: Searches a list for an item, then returns that found item. We pass to ''find'' a //keyword parameter//.
+: ``(find `y                  ``
+: ``      `((5 x) (3 y) (7 z))``
+: ``      :key #'cadr)``
+: -> `(3 Y)`
 
 ; printc
 : Print string
