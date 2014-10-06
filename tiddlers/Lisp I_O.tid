@@ -1,0 +1,14 @@
+created: 20141006171139028
+modified: 20141006171853993
+tags: Lisp
+title: Lisp I/O
+type: text/vnd.tiddlywiki
+
+; read
+: Read user input, //Derp !//
+
+; print
+: Print stuff, //Duh !//
+
+; prin1
+: Same as ''print'', excepted that it doesn't add newline or space at the end of the printed output. Because that make it more flexible, it is commonly used in serious Lisp code (don't be fooled by the name !)
