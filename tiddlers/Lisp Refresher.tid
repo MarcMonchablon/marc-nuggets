@@ -1,5 +1,5 @@
 created: 20140921213008417
-modified: 20141006160151394
+modified: 20141006163559021
 tags: Lisp Refresher
 title: Lisp Refresher
 type: text/vnd.tiddlywiki
@@ -49,6 +49,13 @@ type: text/vnd.tiddlywiki
 : ``      `((5 x) (3 y) (7 z))``
 : ``      :key #'cadr)``
 : -> `(3 Y)`
+
+; push
+: push an element to the begining of a list.
+: ``(defparameter *foo* `(1 2 3))``
+: ``(push 7 *foo*)``
+: also equivalent to :
+: ``(setf *foo* (cons 7 *foo*))``
 
 ; printc
 : Print string

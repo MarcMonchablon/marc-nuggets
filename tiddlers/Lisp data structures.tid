@@ -1,5 +1,5 @@
 created: 20141004114232744
-modified: 20141004125417607
+modified: 20141006165404673
 tags: Lisp
 title: Lisp data structures
 type: text/vnd.tiddlywiki
@@ -17,4 +17,12 @@ When can search for an item using a key with ''assoc''.
 
 > ``(assoc `garden *nodes*)``
 `(GARDEN (YOU ARE IN` [...]`)`
+
+The ''assoc'' function always return the __first__ element of a list. Hence when changing the values of things in a //alist//, A common technique used by lisper is the ''push''/''assoc'' idiom :
+
+> ``(push `(garden (The garden is now all sad and muddy)) *nodes*)``
+> ``(assoc `garden *nodes*)``
+`(GARDEN (THE GARDEN IS NOW ALL SAD AND MUDDY))`
+
+Here we can use the updated value of ''garden'' while keeping the history of values.
 
