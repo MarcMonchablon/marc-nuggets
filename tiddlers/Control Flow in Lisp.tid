@@ -1,5 +1,5 @@
 created: 20140922231432798
-modified: 20141004105333758
+modified: 20141006162110439
 tags: Lisp
 title: Control Flow in Lisp
 type: text/vnd.tiddlywiki
@@ -13,9 +13,9 @@ Here for [[Cool tricks with conditions]] !
 ; cond
 : ''cond'' is the classic way to do branching in lisp.
 : (and the one true lisp conditional for some lisp programmer).
-: `(cond ((condition_1) (do stuff) (do another stuff)`
-: `       (condition_2) (do completely different stuff)`
-: `       (t  (do stuff by default)`
+: `(cond ((condition_1) (do stuff) (do another stuff))`
+: `      ((condition_2) (do completely different stuff))`
+: `      (t  (do stuff by default)))`
 
 ; if
 : >``(if (= (+ 1 2) 3) `yup `nope)
