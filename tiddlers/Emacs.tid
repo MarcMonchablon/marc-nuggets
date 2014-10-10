@@ -1,10 +1,14 @@
 created: 20140929215550938
-modified: 20141004215146209
+modified: 20141006231607560
 tags: Emacs
 title: Emacs
 type: text/vnd.tiddlywiki
 
 [[Reading pdf in Emacs]]
+
+; Emacs Lisp intro
+: Apparently the Emacs Lisp Intro is worth a look.
+: `C-h i` and search for `Emacs Lisp Intro`
 
 ; The most important command evar
 : `M-x discover-my-major`

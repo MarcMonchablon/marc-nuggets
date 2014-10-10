@@ -1,6 +1,6 @@
 created: 20140824013717729
 creator: pup
-modified: 20141004212633160
+modified: 20141006224359612
 modifier: pup
 tags: Main Poe [[Point of Entry]]
 title: Edgar
@@ -17,6 +17,8 @@ yeah. Sorry.
  *** [[Defining stuff in Lisp]]
  *** [[Manipulating cons cells]]
  *** [[Control Flow in Lisp]]
+ ** [[Ruby Refresher]]
+ ** [[Python Refresher]]
   * Server
  ** [[Node.js Refresher]]
  * Tool
