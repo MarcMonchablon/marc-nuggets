@@ -1,6 +1,6 @@
 created: 20140824013717729
 creator: pup
-modified: 20141006224359612
+modified: 20141010191615772
 modifier: pup
 tags: Main Poe [[Point of Entry]]
 title: Edgar
@@ -19,7 +19,9 @@ yeah. Sorry.
  *** [[Control Flow in Lisp]]
  ** [[Ruby Refresher]]
  ** [[Python Refresher]]
-  * Server
+ * Front-end Web
+ ** [[Angular.js]]
+ * Server
  ** [[Node.js Refresher]]
  * Tool
  ** [[Vim]]
