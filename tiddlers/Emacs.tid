@@ -1,5 +1,5 @@
 created: 20140929215550938
-modified: 20141006231607560
+modified: 20141012173628460
 tags: Emacs
 title: Emacs
 type: text/vnd.tiddlywiki
@@ -27,6 +27,9 @@ type: text/vnd.tiddlywiki
 
 ; To customize thingz
 : `M-x customize`
+
+; Reloading file (like after a git revert)
+: `M-x revert-buffer` (also `C-x C-v`)
 
 ; Copy/Paste Emacs content to clipboard
 : `M-x clipboard-kill-ring-save` to copy region
