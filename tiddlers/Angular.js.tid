@@ -1,7 +1,10 @@
 created: 20141010191035444
-modified: 20141010191048438
+modified: 20141013012644490
 tags: Angular
 title: Angular.js
 type: text/vnd.tiddlywiki
 
 Simple Tab control in Angular.js : http://jsfiddle.net/jccrosby/eRGT8/light/
+
+Good tutorial on interfacing Angular with Browserify
+https://blog.codecentric.de/en/2014/08/angularjs-browserify/
