@@ -1,0 +1,14 @@
+created: 20141013001924010
+modified: 20141013002115159
+tags: Gulp Node.js
+title: Gulp
+type: text/vnd.tiddlywiki
+
+; Gulp docs
+: https://github.com/gulpjs/gulp/blob/master/docs/README.md#articles
+
+; Awesome book / step-by-step tutorial about gulp :
+: http://david.nowinsky.net/gulp-book/
+
+; Rily Cool cheatsheet 
+: https://github.com/osscafe/gulp-cheatsheet

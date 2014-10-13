@@ -1,8 +1,10 @@
 created: 20141004152458905
-modified: 20141004153959033
+modified: 20141012232230937
 tags: Node.js
 title: On package.json
 type: text/vnd.tiddlywiki
+
+When beginning a Webapp, run `npm init` to create a default package.json.
 
 When installing a module in a application, doing
 `npm install --save XXX` also write the module in the //package.json// manifest.
