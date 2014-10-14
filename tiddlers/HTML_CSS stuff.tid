@@ -1,0 +1,14 @@
+created: 20141014020335391
+modified: 20141014020527227
+tags: HTML CSS
+title: HTML/CSS stuff
+type: text/vnd.tiddlywiki
+
+Good sources on CSS layout:
+http://www.maxdesign.com.au/articles/css-layouts/
+(albeit a bit dated (2002)
+
+On float containement : http://colinaarts.com/articles/float-containment/
+
+On Block Formatting Context:
+http://stackoverflow.com/questions/6196725/how-does-the-css-block-formatting-context-work
