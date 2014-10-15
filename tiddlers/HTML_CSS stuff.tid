@@ -1,5 +1,5 @@
 created: 20141014020335391
-modified: 20141014020527227
+modified: 20141014020656116
 tags: HTML CSS
 title: HTML/CSS stuff
 type: text/vnd.tiddlywiki
@@ -12,3 +12,4 @@ On float containement : http://colinaarts.com/articles/float-containment/
 
 On Block Formatting Context:
 http://stackoverflow.com/questions/6196725/how-does-the-css-block-formatting-context-work
+http://www.w3.org/TR/CSS2/visuren.html
