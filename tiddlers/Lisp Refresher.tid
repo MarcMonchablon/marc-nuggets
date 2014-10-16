@@ -1,5 +1,5 @@
 created: 20140921213008417
-modified: 20141006171114151
+modified: 20141016140206774
 tags: Lisp Refresher
 title: Lisp Refresher
 type: text/vnd.tiddlywiki
@@ -18,8 +18,15 @@ type: text/vnd.tiddlywiki
 !! Conventions
 
 * When defining a ''predicate'' (a function that return either //nil// or a truth value), it is customary to append the letter ''p'' at the end of his name.
+* Lisp can treat program code and data interchangeably. A programming language that use the same data structures to code data and program code is called //homoiconic// (Which is, incidentally, a wonderful pseudonym probably already taken on Tumblr).
+* Rules of indentation and commenting can be found here : http://dept-info.labri.fr/~strandh/Teaching/MTP/Common/Strandh-Tutorial/indentation.html http://people.ace.ed.ac.uk/staff/medward2/class/moz/cm/doc/contrib/lispstyle.html
+
 
 !! Misc
+
+; eval
+: One of the most powerfull function of lisp : treat the content of the thing given to him as code that is to be executed.
+: //__Note__: ''eval'' can look enticing, but experienced Lispers only use it sparsely. A beginning Lisper will often use it instead of defining a Lisp macro. Also obvious security risk.//
 
 ; mapcar
 : Take a function and a list, and apply this function to all the elements of the list.

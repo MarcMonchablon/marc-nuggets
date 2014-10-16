@@ -1,5 +1,5 @@
 created: 20140921232043750
-modified: 20140921232142640
+modified: 20141016130148311
 tags: Lisp
 title: Defining stuff in Lisp
 type: text/vnd.tiddlywiki
@@ -31,3 +31,6 @@ type: text/vnd.tiddlywiki
      (mul (x y) (* x y))
      (square (n) (mul n n)))
     (square 3))`
+
+; quote
+: the single quote `'` is just shorthand for the Lisp command ''quote'', hence `'foo` is the same as `(quote foo)`.

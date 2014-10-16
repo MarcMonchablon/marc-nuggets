@@ -1,5 +1,5 @@
 created: 20141004145248346
-modified: 20141004155456422
+modified: 20141016120558115
 tags: Javascript Refresher Node.js
 title: Node.js Refresher
 type: text/vnd.tiddlywiki
@@ -11,6 +11,8 @@ type: text/vnd.tiddlywiki
 * [[Using Buffers in Node.js]]
 
 !! Misc
+
+A neat introductory course on Streams can be found here https://github.com/substack/stream-handbook and with the shell command `stream-handbook`.
 
 We can use //string interpolation// with //console.log// like this :
 
