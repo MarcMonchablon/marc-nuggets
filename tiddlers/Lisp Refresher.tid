@@ -1,5 +1,5 @@
 created: 20140921213008417
-modified: 20141016140206774
+modified: 20141016141141323
 tags: Lisp Refresher
 title: Lisp Refresher
 type: text/vnd.tiddlywiki
@@ -7,6 +7,7 @@ type: text/vnd.tiddlywiki
 //Disclaimer//: Most (if not all) of the things written in this section is taken (sometime verbatim) from the excellent book 'Land of Lisp' by Conrad Barski.
 
 * [[Defining stuff in Lisp]]
+* [[Lambda on Lisp]]
 * [[Manipulating cons cells]]
 * [[Control Flow in Lisp]]
 ** [[Cool tricks with conditions]]

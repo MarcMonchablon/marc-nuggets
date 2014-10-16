@@ -1,10 +1,10 @@
 created: 20141004114232744
-modified: 20141006165404673
+modified: 20141016150718959
 tags: Lisp
 title: Lisp data structures
 type: text/vnd.tiddlywiki
 
-''Association list'' (also called ''alist'' for short) :
+!! ''Association list'' (also called ''alist'' for short) :
 
 ```
 (defparameter *nodes*
@@ -25,4 +25,53 @@ The ''assoc'' function always return the __first__ element of a list. Hence when
 `(GARDEN (THE GARDEN IS NOW ALL SAD AND MUDDY))`
 
 Here we can use the updated value of ''garden'' while keeping the history of values.
+
+''Alist'' are not a very efficient way to store and retrieve data, unless you're dealing with very short lists (''under a dozen'' items).
+
+!! ''Dotted list''
+
+A list is usually a chain of cons cells termined by `nil`:
+
+> `(cons 1 (cons 2 (cons 3 nil)))`
+`(1 2 3)`
+
+A ''dotted list'', however, end by a non-nil value, which is then showed by a `.`:
+
+> `(cons 1 (cons 2 3))`
+`(1 2 .3)`
+
+Those dotted list aren't that usual, but can be used to represent pairs (like for coordinates).
+
+
+!! ''Circular Lists''
+@@color:red;
+// __Warning__: Before messing with circular list, if you don't want to screw you Common Lisp environment you should run
+`(setf *print-circle* t)` ! //
+@@
+
+Here is one way to create a circular list :
+
+>``(defparameter foo `(1 2 3))``
+>`(setf (cdddr foo) foo)`
+`#1=(1 2 3 . #1#)`
+
+
+!! ''Visualizing Tree-like Data''
+
+Nested cons cells is usually how it's done, like this :
+
+```
+(defparameter *house* `((walls (mortar (cement)
+                                       (water)
+                                       (sand))
+                               (bricks))
+                        (windows (glass)
+                                 (frame)
+                                 (curtains))
+                        (roof (shingles)
+                              (chimney))))
+```
+
+!! ''Visualizing Graphs''
+
 
