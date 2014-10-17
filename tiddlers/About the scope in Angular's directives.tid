@@ -1,0 +1,24 @@
+created: 20141017170417615
+modified: 20141017172132257
+tags: Angular
+title: About the scope in Angular's directives
+type: text/vnd.tiddlywiki
+
+When defining a directive you have three options for the type of scopes :
+
+* existing scope (with `scope: true`) [by default]
+* new scope      (with `scope: false`)
+* isolate scope  (with `scope: { //stuff }`)
+
+The ''existing scope'' come from the directive's DOM element.
+
+The ''new scope'' inherits form the enclosing controller's scope (in a //prototypical inheritance// fashion). This scope will be shared with any other directives on the DOM element that require this kind of scope, and can be used to communicate with them.
+
+The ''isolate scope'' is, //well//, isolated, and quite blank with the exceptions of binded elements. This scope is the best when creating reusable elements.
+
+//__Note__: Even thought ''isolate scope'' doesn't inherit model properties, they are still children of their parents scope and as such ~~own them respect~~ have a ''$parent'' property that reference their parents.//
+
+
+@@color:lightgray;
+(Here should go a section about binding strategies of isolate scope.)
+@@

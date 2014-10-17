@@ -1,0 +1,10 @@
+created: 20141017162328942
+modified: 20141017171251445
+tags: Angular
+title: On Angular directives
+type: text/vnd.tiddlywiki
+
+//__Note__: This is pretty much taken verbatim from the book 'Angular.Js', O'Reilly edition, page 138.//
+
+* [[About Angular compile and link functions]]
+* [[About the scope in Angular's directives]]

@@ -1,0 +1,51 @@
+created: 20141017170300035
+modified: 20141017170318971
+title: About Angular compile and link functions
+type: text/vnd.tiddlywiki
+
+When Angular is loaded, theses 3 steps happen :
+
+* //Script loads//
+Angular loads and look for the `ng-app`directive to find the application boundaries
+
+* //Compile phase//
+Angular walks the DOM to identify registered directives in the templates. For each directive, it transform the 	DOM based on the directive's rule and call the //compile// function if it exist, which result in a compiled template function, which will invoke the //link// function from all the directives.
+
+* //Link phase//
+Angular then run a //link// function for each directive; The link function typically create listener for the DOM  or the model. These listeners keep the view and the model in sync at all time.
+
+----
+The //compile// function :
+
+* deal with transforming the template itself
+* __cannot__ acced to the //scope// ('cause it doesn't exist yet on compile phase)
+* execute only once
+* can eventually return a //link// function (that can have access to the scope)
+
+The //link// function:
+
+* deal with making a dynamic connection between model and view.
+* can acced to the //scope//
+* execute many times (once for each instance of the directive)
+
+
+Generally you mostly write the //link// function since majority of directives don't need to transform the template.
+
+
+Syntax for both of these function is :
+
+```
+compile: function compile(tElement, tAttrs, transclude) {
+  return {
+    pre: function preLink(scope, iElement, iAttrs, controller) {...}
+    post: function postLink(scope, iElement, iAttrs, controller) {...}
+    }
+}
+
+link: function postLink(scope, iElement, iAttrs) {...}
+```
+
+//compile// can return both a //preLink// and a //postLink// function. //preLink// run after the compile phase but before directives on the child elements are linked. (and //postLink// after, //Duh//). Thus if you need to change the DOM structure, you must do it in a //postLink// because doing it in //preLink// can will confuse the attachement process and can cause an error.
+
+//compile// receive a template while //link// receive a //view// instance, hence the //t// and //i// prefixes;
+Also, //compile// receive a //transclude// function which give the opportunity to programmatically transclude content for situations where template-based transclusion aren't enough.
