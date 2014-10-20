@@ -1,0 +1,15 @@
+created: 20141020165658221
+modified: 20141020173409917
+tags: Emacs
+title: Code folding in Emacs
+type: text/vnd.tiddlywiki
+
+In Emacs, folding can be achieved throught ''Outline mode'' (used by Org-mode, for example) or ''HideShow''.
+http://www.emacswiki.org/HideShow
+
+The keybinding for me (set in .emacs) is :
+
+* `C-c h` for `hs-hide-block`
+* `C-c s` for `hs-show-block`
+* `C-c S` for `hs-show-all`
+* `C-c H` for `hs-hide-all`
