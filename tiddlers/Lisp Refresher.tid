@@ -1,5 +1,5 @@
 created: 20140921213008417
-modified: 20141016141141323
+modified: 20141020190717277
 tags: Lisp Refresher
 title: Lisp Refresher
 type: text/vnd.tiddlywiki
@@ -15,6 +15,7 @@ type: text/vnd.tiddlywiki
 * [[Lisp data structures]]
 * [[Lisp quasiquoting]]
 * [[Lisp I/O]]
+* [[Land of Lisp and sbcl]]
 
 !! Conventions
 
@@ -34,6 +35,9 @@ type: text/vnd.tiddlywiki
 : >`(mapcar #'sqrt '(4 9 25))`
 : `(2.0 3.0 5.0)`
 : // __Note__: The #' symbol is a shorthand for the function operator, used by lisp interpreted to disambiguate between parameter name and function name.//
+
+; mapc
+: A slightly more efficient variant of ''mapcar'', that does not return the transformed list.
 
 ; apply
 : Pass it a function and a list of objects, and it pretend that the items in the list are separate objects and pass them to the given function as such.
@@ -74,6 +78,14 @@ type: text/vnd.tiddlywiki
 
 ; expt (epxt a b)
 : Return a^b
+
+; substitute-if
+: Substitute values based on the result of a test function:
+: >`(substitute-if #\e #'digit-char-p "I'm a l33t hack3r!")`
+: `"I'm a leet hacker!"`
+
+; digit-char-p
+: Predicate true when given character is a numerical digit.
 
 ; progn
 : Wedge an extra command in a simple proposition
