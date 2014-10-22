@@ -1,11 +1,13 @@
 created: 20141020190724011
-modified: 20141020191730374
+modified: 20141022121604606
 tags: Lisp [[Land of Lisp]] sbcl
 title: Land of Lisp and sbcl
 type: text/vnd.tiddlywiki
 
 Since I use sbcl in my Emacs' REPL while __Land of Lisp__ use CLISP-dependent part in some functions, here are the tweaked functions to make it work :
 https://groups.google.com/forum/#!msg/land-of-lisp/4Ku-bPTdSys/-VkRqigBuM4J
+
+Also, you might need to look at [[Loading ASDF Lisp module]]
 
 I copied post content here : 
 

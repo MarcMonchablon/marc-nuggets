@@ -1,0 +1,23 @@
+created: 20141022120423914
+modified: 20141022121742828
+tags: Lisp
+title: Loading ASDF Lisp module
+type: text/vnd.tiddlywiki
+
+In order to load //asdf//, I use //quicklisp//, which is a kind of package manager //(I guess ?)//
+Main page for quicklisp is here http://www.quicklisp.org.
+
+Basically :
+
+; To search for a package :
+: `(ql:system-apropos "myPackage")`
+
+; To load a particular package :
+: `(ql:quickload "asdf")`  <- Command you probably are searching for right now.
+
+Also, I already invoked the command `(ql:add-to-init-file)`, so //quicklisp// should load automatically when launching //sbcl//. 
+
+If for one reason I need to manualy load quicklisp, I have to load `setup.lisp` in `~/Documents/Applications/Lisp/quicklisp/` (not the default directory) using :
+
+`(load "~/Documents/Applications/Lisp/quicklisp/setup.lisp")`
+
