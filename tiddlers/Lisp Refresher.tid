@@ -1,5 +1,5 @@
 created: 20140921213008417
-modified: 20141020190717277
+modified: 20141022125909429
 tags: Lisp Refresher
 title: Lisp Refresher
 type: text/vnd.tiddlywiki
@@ -22,8 +22,8 @@ type: text/vnd.tiddlywiki
 * When defining a ''predicate'' (a function that return either //nil// or a truth value), it is customary to append the letter ''p'' at the end of his name.
 * Lisp can treat program code and data interchangeably. A programming language that use the same data structures to code data and program code is called //homoiconic// (Which is, incidentally, a wonderful pseudonym probably already taken on Tumblr).
 * Rules of indentation and commenting can be found here : http://dept-info.labri.fr/~strandh/Teaching/MTP/Common/Strandh-Tutorial/indentation.html http://people.ace.ed.ac.uk/staff/medward2/class/moz/cm/doc/contrib/lispstyle.html
-
-
+* It is common in Lisp to create small functions that have zero arguments. Theses functions are officially called //nullary functions//. Lispers often create such functions in order to describe a computation that they don't want to run until later. In this scenario, a function without arguments is commonly called a ''thunk'' or a ''suspension''.
+ 
 !! Misc
 
 ; eval
@@ -38,6 +38,17 @@ type: text/vnd.tiddlywiki
 
 ; mapc
 : A slightly more efficient variant of ''mapcar'', that does not return the transformed list.
+
+; maplist
+: Similar to ''mapcar'', except that the function inside it receives the entire remainder of the list instead of only the current item.
+: >`(maplist #'print '(a b c))`
+:`(A B C)`
+:`(B C)`
+:`(C)`
+: >`(mapcar #'print '(a b c))`
+: `A`
+: `B`
+: `C`
 
 ; apply
 : Pass it a function and a list of objects, and it pretend that the items in the list are separate objects and pass them to the given function as such.
