@@ -1,0 +1,8 @@
+created: 20141105191349222
+modified: 20141105191525487
+tags: Book [[Pragmatic Programmer]] Concurrency [[Seven Concurrency Models in Seven Weeks]]
+title: Seven Concurrency Models in Seven Weeks
+type: text/vnd.tiddlywiki
+
+* [[Chapter 1 - Introduction]]
+* [[Chapter 2 - Thread and Locks]]

@@ -1,6 +1,6 @@
 created: 20140824013717729
 creator: pup
-modified: 20141014020310798
+modified: 20141105191328984
 modifier: pup
 tags: Main Poe [[Point of Entry]]
 title: Edgar
@@ -33,5 +33,7 @@ yeah. Sorry.
  ** [[PostgreSQL]]
  *** [[Add user in a brand new postgreSQL installation]]
  *** [[Add modules in PostgreSQL]]
+* Books
+** [[Seven Concurrency Models in Seven Weeks]]
 * Misc
 ** [[On (Powerpoint) Presentation]]
