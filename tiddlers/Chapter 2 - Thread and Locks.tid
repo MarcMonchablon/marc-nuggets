@@ -1,0 +1,8 @@
+created: 20141111124642665
+modified: 20141111125320368
+tags: [[Seven Concurrency Models in Seven Weeks]]
+title: Chapter 2 - Thread and Locks
+type: text/vnd.tiddlywiki
+
+Thread and locks tend to be difficult, unreliable and dangerous compared to newer stuff. Yet they tend to be the default choice.
+They are little more than a formalization of what the underlying hardware does; Hence they are supported almost everywhere, but does not provide general design guideline, so programmer can find himself quickly dealing with a lovecraftian horror.
