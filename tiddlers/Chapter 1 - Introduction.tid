@@ -1,8 +1,10 @@
 created: 20141105191545612
-modified: 20141105193035310
+modified: 20141111124400315
 tags: [[Seven Concurrency Models in Seven Weeks]]
 title: Chapter 1 - Introduction
 type: text/vnd.tiddlywiki
+
+! Concurrent != Parallelism
 
 Even tought they are often used interchangeably, //concurrent// and //parallel// refer to related but different things !
 
@@ -15,16 +17,37 @@ Concurrency is about dealing with lots of things at once.
 Parallelism is about doing lots of things at once.
 <<< Rob Pike
 
-Concurrency and parallelism is often confused because traditional threads end locks don't provide any direct support for parallelism. If you want to exploit multiple cores with threads and lokcs, your only choice is to create a concurrent program and then run on parallel hardware.
+Concurrency and parallelism are often confused because traditional threads and locks don't provide any direct support for parallelism. If you want to exploit multiple cores with threads and locks, your only choice is to create a concurrent program and then run on parallel hardware.
 
 It is unfortunate because concurrent program are often __nondeterministic__ (do different things depending on precise timing of events). Nondeterminism is natural and to be expected if we are dealing with a genuinely concurrent problem !
 
 However, parallelism doesn't have to be necessary nondeterministic. Language with explicit support for paralellism allow you to write parallel code without introducting the specter of nondeterminism.
 
 ---
+! Can I haz moar parallelism ?
 
+There are, in fact, multiple kinds of parallelism :
+
+* //Bit-level parallelism// : A 64-bit computer is faster than a 8-bit one because he can process the 64 bits all at once.
+* //Instruction-level parallelism// : Instruction aren't handled sequentially. We do stuff like //pipelining//, //out-of-order execution// and //speculative execution//.
+* //Data-level parallelism// : Modern GPU might do the same operation on each pixels of an image, and thus do it in parallel. // Also Related to __SIMD__: Single Instruction, Multiple Data)//
+* //Task-level parallelism// : Basically multiple processors.
+
+ !!! On task-level parallelism 
 From a programmer's point of view, the most important distinguishing feature of a multiprocessor architecture is the memory model, specifically whether it's //shared// or //distributed//.
 
-* In a //shared-memory processor//, each processor can accessn any memory location. Interprocessor communication is primarily through memory.
+* In a //shared-memory processor//, each processor can access any memory location. Interprocessor communication is primarily through memory.
 
 * In a //distributed-memory processor//, each processor has is own local memory. Interprocessor communication is primarily via the network.
+
+---
+
+! Concurrency : Beyond multiple cores
+
+Concurrency is more than just about exploiting parallelism. It  allow software to be :
+
+* responsive : A phone can play music, display Tumblr feeds while checking message and react when you touch it.
+* fault tolerant : Distributing software help handling failure. Having some server in Europe, America and Asia avoid a complete black-out. Also concurrency enable resilient or fault-tolerant software through the magic of :
+** independance (Failure of one task shouldn't crash the other ones)
+** fault-detection (When a task fail or become unresponsive, a separate task is notified so remedial action can be taken)
+* efficient & simple : Even though concurrency tend to produce difficult code and hard-to-debug issue is lots of case, when dealing with a inherently concurrent problem, trying to bend it to be non-concurrent is hard and can easily lead to convoluted code.
