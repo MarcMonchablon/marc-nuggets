@@ -1,0 +1,8 @@
+created: 20141112102812043
+modified: 20141112123027184
+tags: Java
+title: Basic Java stuff you probabily already know
+type: text/vnd.tiddlywiki
+
+; To execute Java code
+: `javac myClassy.java` which compile it in a .class file. `java myClassy.class` the crap out of it.

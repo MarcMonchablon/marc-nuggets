@@ -1,0 +1,15 @@
+created: 20141112122432773
+modified: 20141112122933604
+tags: Java JUnit
+title: Getting JUnit up and Running
+type: text/vnd.tiddlywiki
+
+!! Compiling tests
+(Took me way to much time to figure it out)
+
+* A good ressource is https://github.com/junit-team/junit/wiki/Getting-started
+* When compiling, do `javac -cp .:/home/pup/Documents/Applications/Java/JUnit/junit-4.10.jar myFile.java`
+* You can test by including `import org.junit.*;`
+* Even better, do `javac_junit myFile.java` (personnal alias)
+* No need to change the classpath for now.
+* As stated in the webpage above, as of JUnit4, do not rely on `junit.framework` or `junit.extensions`.
