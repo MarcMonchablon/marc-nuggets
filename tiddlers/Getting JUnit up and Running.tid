@@ -1,5 +1,5 @@
 created: 20141112122432773
-modified: 20141112122933604
+modified: 20141112153437083
 tags: Java JUnit
 title: Getting JUnit up and Running
 type: text/vnd.tiddlywiki
@@ -13,3 +13,9 @@ type: text/vnd.tiddlywiki
 * Even better, do `javac_junit myFile.java` (personnal alias)
 * No need to change the classpath for now.
 * As stated in the webpage above, as of JUnit4, do not rely on `junit.framework` or `junit.extensions`.
+
+!! Running tests
+
+* Lauch the testing class with `java -cp .:/home/pup/Documents/Applications/Java/JUnit/junit-4.10.jar org.junit.runner.JUnitCore myClassyTest`.
+* Even better, use `java_junit myClassyTest` (personnal alias)
+
