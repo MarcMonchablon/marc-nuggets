@@ -1,5 +1,5 @@
 created: 20140921232043750
-modified: 20141016130148311
+modified: 20141113175915835
 tags: Lisp
 title: Defining stuff in Lisp
 type: text/vnd.tiddlywiki
@@ -18,6 +18,17 @@ type: text/vnd.tiddlywiki
 ; let
 : Define a ''local'' variable
 : `(let ((a 5) (b 6)) (+ a b))`
+
+; let*
+: Same as ''let'', but allow to reference previously defined variable
+: >`(let* ((a 5)
+	        (b (+ a 2)))
+   b)`
+: `7`
+: >`(let ((a 5)
+	        (b (+ a 2)))
+   b)`
+: `GRRR GRR I'M THE INTERPRETER AND I'M NOT HAPPY !`
 
 ; flet
 : Define a ''local'' function
