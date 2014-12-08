@@ -1,0 +1,17 @@
+created: 20141208170937133
+modified: 20141208171338665
+title: Wordpress
+type: text/vnd.tiddlywiki
+
+!! Wordpress permission issue
+
+if adding images or new themes/plugin create a permission error, it is a permission error on the wordpress folder
+Sometime, when adding stuff in local server, wordpress ask for FTP credentials.
+The solution, as stated here http://wordpress.stackexchange.com/questions/57166/ftp-credentials-on-localhost,
+is :
+`sudo chown -R www-data wordpress`
+
+`sudo chmod -R g+w wordpress`
+
+here, ''www-data'' is the username used by Apache in Debian/Ubuntu distribution.
+To know it, one solution is the command : `ps aux | egrep '(apache|httpd)'` as stated here : http://serverfault.com/questions/125865/finding-out-what-user-apache-is-running-as
