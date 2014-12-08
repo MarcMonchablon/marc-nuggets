@@ -1,6 +1,6 @@
 created: 20140824013717729
 creator: pup
-modified: 20141112102501167
+modified: 20141208153311889
 modifier: pup
 tags: Main Poe [[Point of Entry]]
 title: Edgar
@@ -26,6 +26,7 @@ yeah. Sorry.
  * Server
  ** [[Node.js Refresher]]
  ** [[Gulp]]
+ ** [[LAMP stack]]
  * Tool
  ** [[Vim]]
  ** [[Emacs]]

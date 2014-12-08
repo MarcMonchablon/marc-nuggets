@@ -1,0 +1,22 @@
+created: 20141208153356556
+modified: 20141208154309203
+tags: LAMP PHP Apache mySQL
+title: LAMP stack
+type: text/vnd.tiddlywiki
+
+!! To change default root directory of an apache server
+
+As instructed here :
+https://help.ubuntu.com/community/ApacheMySQLPHP or here http://www.ajopaul.com/2010/05/01/ubuntu-apache2-change-default-documentroot-varwww/,
+the default root folder for apache servers is in /var/www or in /var/www/html.
+
+To change that (for example to ~/www), you have to change the ''~DocumentRoot'' line in the file ///etc/apache2/site-available/000-default.conf//. (Be sure ''__NOT__'' to finish this line with a slash. so write ///home/myUser/www/// and not ///home/myUser/www///) 
+
+You also have to change the ''<Directory'' stuff in ///etc/apache2/apache2.conf//.
+
+Also make sure that Apache user have the necessary permissions on the new root folder, otherwise you might have a ''403 error''.
+
+Once those changes have been saved, restart the server with
+
+''sudo service apache2 restart''
+
