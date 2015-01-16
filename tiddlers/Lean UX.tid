@@ -1,0 +1,63 @@
+created: 20150116162603574
+modified: 20150116172507540
+tags: Book UX
+title: Lean UX
+type: text/vnd.tiddlywiki
+
+Notes from the book 'Lean UX' by Jeff Gothelf
+
+!! Chapter 2 : Principles of Lean UX
+
+* ''Cross-functional teams''
+* ''Small, Dedicated, Colocated''
+** Increase communication, focus and camaraderie
+* ''Progress = Outcomes, not output''
+** Features and services are outputs
+** The business goals they are meant to achieve are outcomes
+** Although it's easier to manage toward the lauch of specifics features sets, predicting which features will achieve specific outcomes is merely //speculation//.
+* ''Problem-focused Teams''
+** Assign to teams problem to solve (as opposed to features to implement)
+** Assigning teams problems to solve show trusts in those teams
+* ''Removing Waste''
+** In UX, the ultimate goal is improved outcomes
+** Remove anything that doesn't lead to this goal
+* ''Small Batch Size''
+** Lean manufacturing use this notion to keep inventory low and quality high
+** Translated to UX : creating only the design necessary to move forward
+** Also avoiding a big 'inventory' if untested/unimplemented ideas.
+* ''Continuous Discovery''
+** Understand what users are doing with your product and why they are doing it
+** Research is done on frequent and regular schedules
+** Research involve the entire team
+* ''GOOB: The new User-centricity''
+** GOOB : "Getting Out Of the Building"
+** The answer lies in the marketplace, outside your building (and not in a meeting-room debate)
+* ''Shared Understanding''
+** Shared understanding is the currency of Lean UX
+** The more a team understand what it's doing and why, the less it depend on reports and detailed documents
+* ''Anti-Pattern: Rockstar, Gurus and Ninjas''
+** Lean UX advocate a team-based mentality
+** Teams breaks down when you add individuals with large egos
+* ''Externalizing Your Work''
+** Get your work out of your head and into public view
+** Allow everyone to see where the team stands
+** Create a passive, ambiant flow of information across the team
+** Allow everyone (even the quiet ones) to participate in information-sharing activities
+* ''Making over Analysis''
+** There is more value in creating the first version of an idea than spending half a day debating its merits in a conference room
+* ''Learing over Growth''
+** Those are difficult because they are contradictory activites :
+*** Figure out the right thing to build
+*** AND scale a business around that thing
+** Scaling an idea that is unproven is risky, hence Lean UX favor a focus on learning first and scaling second
+* ''Permission to fail''
+** Means that the team has a sage environment in which to experiment
+** cf. Experiment in a ceramic class
+*** Students in a class divised into two groups
+**** Group A : Only one clay pot asked to do for the semester. Semester grade depend on it's quality
+**** Group B : Graded by the amount of pots (in pounds) made during the semester. Quality is not evaluated at all
+*** The Group B pots ended to be much better that A's
+*** -> It is due to the large amout of iteration in B group
+** Document don't solve customer problems -- good products do.
+** The team's focus should be on learning which features have the biggest impact on their customers
+** The artifacts the team uses to gain that knowledge are irrelevant
