@@ -1,5 +1,5 @@
 created: 20140929215550938
-modified: 20141020165635612
+modified: 20150117005735071
 tags: Emacs
 title: Emacs
 type: text/vnd.tiddlywiki
@@ -7,6 +7,9 @@ type: text/vnd.tiddlywiki
 [[Reading pdf in Emacs]]
 
 [[Code folding in Emacs]]
+
+; Emacs manual
+: `C-h r`
 
 ; Emacs Lisp intro
 : Apparently the Emacs Lisp Intro is worth a look.
