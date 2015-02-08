@@ -1,0 +1,49 @@
+created: 20150208200704499
+modified: 20150208203401390
+tags: Ruby Refresher
+title: Ruby Refresher
+type: text/vnd.tiddlywiki
+
+//Disclaimer//: Lots of stuff here come from the book 'Programming Ruby 1.9 - 2.0'.
+
+!! Ruby jargon
+
+!!! General rules
+* Indentation is not significant. Standard is 2 characters.
+* Naming convention is as follow :
+** local variables, method parameters and method names start with a //lowercase letter// or an //underscore//.
+** Global variables are prefixed with a $
+** Instance variables begin with a @
+** Class variables start with two @
+** Class names, module names and constants must start with an //uppercase letter//
+** Multiwords instance variables are writter with underscore between the words
+** Multiwords class names are writtern in MixedCase (with each word capitalized)
+** Method name may end with ?, ! and =
+* //nil// is an object, just like any other
+
+
+!!! Object stuff
+
+`"Rick".length  # -> 4`
+
+* The word //object// is used interchangeably with //class instance//.
+* Objects are created using a //constructor// (but you already know that)
+* Every object has a unique //object identifier// (also called //object ID//)
+* Within each class, you define //instance method//
+* Methods are invoqued by sending a message to an object.
+* The thing before the perdio is called the //receiver//
+
+
+!!! String stuff
+* We can create //string litterals// with simple or double quotes
+* With simple quotes, Ruby does very little processing
+* With double quotes, Ruby does more stuffs
+** It look for //substitution// (sequences that start with backslash, like `\n`)
+** It does interpolation, so `"My name is #{name}"` become `"My name is Marc"`
+* Arbitrarily complex expression are allowed in the `#{...}` construct
+
+
+!!! Function stuff
+* We can omit parentheses, but it's recommended to do it only in simplest case
+* The value returned by a method is the value of the last expression.
+
