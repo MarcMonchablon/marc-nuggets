@@ -1,0 +1,49 @@
+created: 20150424231011878
+modified: 20150424234055711
+tags: Node.js
+title: Better Node.js installation with NVM
+type: text/vnd.tiddlywiki
+
+! The quick (but troublesome) way
+
+Just do `apt-get install nodejs`.
+
+However with this installation some npm modules need root permission to install, and that's the reason we're going to do it ...
+
+! The clean way
+
+A better way (for a development machine) to do it is by using NVM, as told [[here|http://stackoverflow.com/questions/16151018/npm-throws-error-without-sudo/24404451#24404451]] :
+
+!! Installing NVM
+We're going to follow the instructions written in the [[nvm page| [[this page|https://github.com/creationix/nvm]], which advise to remove any installation of node.js.
+
+!!! Throught install script
+
+`wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.24.1/install.sh | bash`
+
+!!! Manually
+
+``git clone https://github.com/creationix/nvm.git ~/.nvm && cd ~/.nvm && git checkout `git describe --abbrev=0 --tags` `` 
+
+Add the line `. ~/.nvm/nvm.sh` in //.bashrc// to activate nvm.
+
+
+!! Installing Node.js
+
+Once NVM is correctly installed,
+you can
+
+* install nvm version 0.12.0 with `nvm install 0.12.0`
+* run a specific version of node with `nvm run 0.12.0`
+* list all node (or IO.js) version with `nvm ls`
+
+You can also use //stable// or //unstable// in lieu of the version number, to run one of the latest node stuff.
+
+!!! Launch node in any new session
+
+If we stop here, we can use node but only by using `nvm run`. Fortunately, by typing (just once) `nvm alias default stable` all new terminal can automatically run node.
+
+!!! One more thing 
+
+`[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
+` just below NVM sourcing line in //.bashrc// to activate bash_completion.
